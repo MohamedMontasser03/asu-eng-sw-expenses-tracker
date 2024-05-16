@@ -53,6 +53,9 @@ export const expenseRouter = createTRPCRouter({
     if (balance.value < input.value) {
       throw new Error("Insufficient funds");
     }
+    if (balance.currencyId !== input.currencyId) {
+      throw new Error("Currency mismatch");
+    }
     await ctx.db.balance.update({
       where: {
         id: input.balanceId,

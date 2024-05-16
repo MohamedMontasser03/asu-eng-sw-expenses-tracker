@@ -34,8 +34,16 @@ export const CreateExpenseForm = ({ onSubmit }: { onSubmit: () => void }) => {
     }
 
     return (
-        <div className="text-white absolute top-0 right-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+        <div 
+            className="text-white absolute top-0 right-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50"
+            onClick={(event) => {
+                if (event.target === event.currentTarget) {
+                    onSubmit();
+                }
+            }}
+        >
             <form className="flex flex-col items-center gap-4 bg-gray-800 p-4 rounded">
+            <h2 className="text-white">Add expense</h2>
                 <label className="text-white" htmlFor="name">
                     Name
                 </label>
@@ -112,6 +120,7 @@ export const CreateExpenseForm = ({ onSubmit }: { onSubmit: () => void }) => {
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     onClick={async (event) => {
                         event.preventDefault();
+                        event.stopPropagation();
                         const name = (document.getElementById("name") as HTMLInputElement).value;
                         const value = Number((document.getElementById("value") as HTMLInputElement).value);
                         const currencyId = (document.getElementById("currencyId") as HTMLSelectElement).value;

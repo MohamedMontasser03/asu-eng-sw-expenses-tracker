@@ -82,27 +82,42 @@ export const ExpensesTable = () => {
                 )}
                 
                 <div className="flex flex-col gap-4">
+                    <div className="flex justify-between">
+                        <div>Name</div>
+                        <div>Value</div>
+                        <div>Currency</div>
+                        <div>Actions</div>
+                    </div>
                     {balances.map((balance) => (
                         <div key={balance.id} className="flex justify-between">
                             <div>{balance.name}</div>
                             <div>{balance.value}{balance.currency.symbol}</div>
                             <div>{balance.currency.name}</div>
-                            <button
-                                onClick={async () => {
-                                    deleteBalance({
-                                        id: balance.id,
-                                    });
-                                    setState("view");
-                                }}
-                                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-                            >
-                                Delete
-                            </button>
+                            <div className="flex gap-4">
+                                <button
+                                    onClick={() => {
+                                        console.log("edit balance");
+                                    }}
+                                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                >
+                                    Edit
+                                </button>
+                                <button
+                                    onClick={async () => {
+                                        deleteBalance({
+                                            id: balance.id,
+                                        });
+                                        setState("view");
+                                    }}
+                                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                                >
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     ))}
                 </div>
             </div>
-            {/* show expenses */}
             <div className="flex justify-between flex-col gap-4 bg-gray-800 p-4 rounded mt-4">
                 <h2>Your expenses</h2>
                 <button
@@ -121,11 +136,38 @@ export const ExpensesTable = () => {
                 )}
 
                 <div className="flex flex-col gap-4">
+                    {expenses.length === 0 && <div>No expenses yet</div>}
+                    {expenses.length > 0 && (
+                        <div className="flex justify-between">
+                            <div>Name</div>
+                            <div>Value</div>
+                            <div>Category</div>
+                            <div>Actions</div>
+                        </div>
+                    )}
                     {expenses.map((expense) => (
                         <div key={expense.id} className="flex justify-between">
                             <div>{expense.name}</div>
                             <div>{expense.value}{expense.currency.symbol}</div>
                             <div>{expense.category.name}</div>
+                            <div className="flex gap-4">
+                                <button
+                                    onClick={() => {
+                                        console.log("edit expense");
+                                    }}
+                                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                >
+                                    Edit
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        console.log("delete expense");
+                                    }}
+                                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                                >
+                                    Delete
+                                </button>
+                                </div>
                         </div>
                     ))}
                 </div>
