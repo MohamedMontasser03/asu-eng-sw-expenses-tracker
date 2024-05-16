@@ -18,6 +18,9 @@ const config = {
     defaultLocale: "en",
   },
   transpilePackages: ["geist"],
+  images: {
+    domains: ["lh3.googleusercontent.com"],
+  },
 };
 
 export default config;
