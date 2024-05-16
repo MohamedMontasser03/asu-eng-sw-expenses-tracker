@@ -14,7 +14,6 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-
 // Necessary for Next auth
 model Account {
     id                       String  @id @default(cuid())
@@ -62,43 +61,42 @@ model VerificationToken {
 
     @@unique([identifier, token])
 }
- 
+
 model ExpenseCategory {
-    id          String   @id @default(cuid())
-    name        String
-    expenses     Expense[]
+    id       String    @id @default(cuid())
+    name     String
+    expenses Expense[]
 }
 
 model Currency {
-    id          String   @id @default(cuid())
-    name        String
-    conversion  Float
-    symbol      String
-    expenses     Expense[]
-    balances     Balance[]
+    id         String    @id @default(cuid())
+    name       String
+    conversion Float
+    symbol     String
+    expenses   Expense[]
+    balances   Balance[]
 }
 
 model Expense {
-    id          String   @id @default(cuid())
-    name        String
-    value       Float
-    date        DateTime
-    user        User     @relation(fields: [userId], references: [id])
-    userId      String
-    category    ExpenseCategory @relation(fields: [categoryId], references: [id])
-    categoryId  String
-    currency    Currency @relation(fields: [currencyId], references: [id])
-    currencyId  String
+    id         String          @id @default(cuid())
+    name       String
+    value      Float
+    date       DateTime
+    user       User            @relation(fields: [userId], references: [id])
+    userId     String
+    category   ExpenseCategory @relation(fields: [categoryId], references: [id])
+    categoryId String
+    currency   Currency        @relation(fields: [currencyId], references: [id])
+    currencyId String
 }
 
 model Balance {
-    id          String   @id @default(cuid())
-    name        String
+    id         String   @id @default(cuid())
+    name       String
     value      Float
-    date        DateTime
-    user        User     @relation(fields: [userId], references: [id])
-    userId      String
-    currency    Currency @relation(fields: [currencyId], references: [id])
-    currencyId  String
+    date       DateTime
+    user       User     @relation(fields: [userId], references: [id])
+    userId     String
+    currency   Currency @relation(fields: [currencyId], references: [id])
+    currencyId String
 }
-
