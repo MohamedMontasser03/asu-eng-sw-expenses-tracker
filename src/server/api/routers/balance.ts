@@ -32,4 +32,15 @@ export const balanceRouter = createTRPCRouter({
       },
     })
   }),
+  deleteBalance: protectedProcedure.input(
+    z.object({
+      id: z.string().min(1),
+    }),
+  ).mutation(async ({ ctx, input }) => {
+    return ctx.db.balance.delete({
+      where: {
+        id: input.id,
+      },
+    });
+  }),
 });

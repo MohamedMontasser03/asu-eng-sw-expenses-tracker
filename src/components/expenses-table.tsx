@@ -9,12 +9,18 @@ export const ExpensesTable = () => {
         data: balances,
         error: balancesError,
         isLoading: balancesLoading,
-        refetch: refetchBalances,
-        
     } = api.balance.getBalances.useQuery();
+    const trpcUtils = api.useUtils();
     const [state, setState] = useState<
         "view" | "balanceCreateForm"
     >("view");
+    const {
+        mutate: deleteBalance,
+    } = api.balance.deleteBalance.useMutation({
+        onSuccess: async () => {
+            await trpcUtils.balance.getBalances.invalidate();
+        }
+    });
 
     if (!sessionData) {
         return <div>Sign in to see your expenses</div>;
@@ -43,7 +49,6 @@ export const ExpensesTable = () => {
                 </button>
                 {state === "balanceCreateForm" && (
                     <CreateBalanceForm onSubmit={async () => {
-                        await refetchBalances();
                         setState("view");
                     }} />
                 )}
@@ -58,7 +63,6 @@ export const ExpensesTable = () => {
                 <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     onClick={() => {
-                        console.log("add balance");
                         setState("balanceCreateForm");
                     }}
                 >
@@ -67,7 +71,6 @@ export const ExpensesTable = () => {
 
                 {state === "balanceCreateForm" && (
                     <CreateBalanceForm onSubmit={async () => {
-                        await refetchBalances();
                         setState("view");
                     }} />
                 )}
@@ -78,9 +81,24 @@ export const ExpensesTable = () => {
                             <div>{balance.name}</div>
                             <div>{balance.value}{balance.currency.symbol}</div>
                             <div>{balance.currency.name}</div>
+                            <button
+                                onClick={async () => {
+                                    deleteBalance({
+                                        id: balance.id,
+                                    });
+                                    setState("view");
+                                }}
+                                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                                Delete
+                            </button>
                         </div>
                     ))}
                 </div>
+            </div>
+            {/* show expenses */}
+            <div className="flex justify-between flex-col gap-4 bg-gray-800 p-4 rounded mt-4">
+                <h2>Your expenses</h2>
             </div>
         </div>
     );

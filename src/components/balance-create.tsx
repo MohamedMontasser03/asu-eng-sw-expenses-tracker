@@ -10,9 +10,14 @@ export const CreateBalanceForm: React.FC<{
         error: currenciesError,
         isLoading: currenciesLoading,
     } = api.currency.getCurrencies.useQuery();
+    const trpcUtils = api.useUtils();
     const {
         mutate: createBalance,
-    } = api.balance.createBalance.useMutation();
+    } = api.balance.createBalance.useMutation({
+        onSuccess: async () => {
+            await trpcUtils.balance.getBalances.invalidate();
+        }
+    });
     
     if (currenciesLoading) {
         return <div>Loading...</div>;
