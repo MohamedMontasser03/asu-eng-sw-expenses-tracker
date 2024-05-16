@@ -22,6 +22,7 @@ export const CreateExpenseForm = ({ onSubmit }: { onSubmit: () => void }) => {
     } = api.expense.createExpense.useMutation({
         onSuccess: async () => {
             await trpcUtils.expense.getExpenses.invalidate();
+            await trpcUtils.balance.getBalances.invalidate();
         }
     });
 

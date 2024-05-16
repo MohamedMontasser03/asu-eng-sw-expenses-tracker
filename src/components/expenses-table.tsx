@@ -3,6 +3,7 @@ import { useState } from "react";
 import { api } from "~/utils/api";
 import { CreateBalanceForm } from "./balance-create";
 import { CreateExpenseForm } from "./expense-create";
+import { DeleteExpenseForm } from "./expense-delete";
 
 export const ExpensesTable = () => {
     const { data: sessionData } = useSession();
@@ -18,7 +19,7 @@ export const ExpensesTable = () => {
     } = api.expense.getExpenses.useQuery();
     const trpcUtils = api.useUtils();
     const [state, setState] = useState<
-        "view" | "balanceCreateForm" | "expenseCreateForm"
+        "view" | "balanceCreateForm" | "expenseCreateForm" | `deleteExpenseForm-${string}`
     >("view");
     const {
         mutate: deleteBalance,
@@ -161,12 +162,22 @@ export const ExpensesTable = () => {
                                 </button>
                                 <button
                                     onClick={() => {
-                                        console.log("delete expense");
+                                        setState(`deleteExpenseForm-${expense.id}`);
                                     }}
                                     className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                                 >
                                     Delete
                                 </button>
+                                {
+                                    state === `deleteExpenseForm-${expense.id}` && (
+                                        <DeleteExpenseForm
+                                            expenseId={expense.id}
+                                            onSubmit={() => {
+                                                setState("view");
+                                            }}
+                                        />
+                                    )
+                                }
                                 </div>
                         </div>
                     ))}
@@ -175,4 +186,3 @@ export const ExpensesTable = () => {
         </div>
     );
 };
-

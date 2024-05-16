@@ -77,4 +77,49 @@ export const expenseRouter = createTRPCRouter({
       },
     })
   }),
+  deleteExpense: protectedProcedure.input(
+    z.object({
+      id: z.string().min(1),
+      refundBalanceId: z.string().optional(),
+    }),
+  ).mutation(async ({ ctx, input }) => {
+    const expense = await ctx.db.expense.findUnique({
+      where: {
+        id: input.id,
+        userId: ctx.session.user.id,
+      },
+    });
+    if (!expense) {
+      throw new Error("Expense not found");
+    }
+    if (input.refundBalanceId) {
+      const balance = await ctx.db.balance.findUnique({
+        where: {
+          id: input.refundBalanceId,
+          userId: ctx.session.user.id,
+        },
+      });
+      if (!balance) {
+        throw new Error("Balance not found");
+      }
+      if (balance.currencyId !== expense.currencyId) {
+        throw new Error("Currency mismatch");
+      }
+      await ctx.db.balance.update({
+        where: {
+          id: input.refundBalanceId,
+        },
+        data: {
+          value: {
+            increment: expense.value,
+          },
+        },
+      });
+    }
+    return ctx.db.expense.delete({
+      where: {
+        id: input.id,
+      },
+    })
+  }),
 });
