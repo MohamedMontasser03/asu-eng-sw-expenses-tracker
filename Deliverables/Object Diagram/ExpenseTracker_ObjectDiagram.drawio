@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" modified="2024-05-16T19:56:54.006Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="SAfjukwasRbFJFUtUS9_" version="24.4.3" type="device">
+  <diagram name="Page-1" id="5w0UR4e3estVI-Q4reiG">
+    <mxGraphModel dx="4233" dy="1402" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-6" target="Ec9qoXcUu5Weos5omlV9-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-630" y="125" />
+              <mxPoint x="-630" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-6" target="Ec9qoXcUu5Weos5omlV9-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-6" target="Ec9qoXcUu5Weos5omlV9-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-6" target="Ec9qoXcUu5Weos5omlV9-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-6" target="Ec9qoXcUu5Weos5omlV9-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-330" y="160" />
+              <mxPoint x="-330" y="290" />
+              <mxPoint x="-300" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;user1:User&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;userId = 1&lt;br&gt;name = &quot;user1&quot;&lt;br&gt;email = abc@gmail.com&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-580" y="80" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;account1:Account&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;accountId = 1&lt;br&gt;user = user1&lt;br&gt;provider = Google&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;type = client&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-827" y="260" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;user1_session:Session&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;sessionId = 1&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;userId = 1&lt;br&gt;name = user1&lt;br&gt;email = abc@gmail.com&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="80" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;authentication_service:GoogleAuthentication&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;Login(sessionId,userId)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-990" y="80" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-12" target="Ec9qoXcUu5Weos5omlV9-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-12" target="Ec9qoXcUu5Weos5omlV9-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;expense1:Expense&amp;nbsp;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp;expenseId = 1&lt;br&gt;name = &quot;ex_1&quot;&lt;br&gt;value = 100.5&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;date = 10-05-2024&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;userId = 1&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;category = Grocery&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;currency = &#39;$&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-580" y="300" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-15" target="Ec9qoXcUu5Weos5omlV9-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-15" target="Ec9qoXcUu5Weos5omlV9-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-300" y="470" />
+              <mxPoint x="-560" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;expense2:Expense&amp;nbsp;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp;expenseId = 2&lt;br&gt;name = &quot;ex_2&quot;&lt;br&gt;value = 50.55&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;date = 05-05-2024&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;userId = 1&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;category = Grocery&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;currency = &#39;$&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-380" y="300" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-17" target="Ec9qoXcUu5Weos5omlV9-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-100" y="450" />
+              <mxPoint x="-520" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;expense3:Expense&amp;nbsp;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp;expenseId = 3&lt;br&gt;name = &quot;ex_3&quot;&lt;br&gt;value = 500&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;date = 01-05-2024&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;userId = 1&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;category = Grocery&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;currency = &#39;$&#39;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="300" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-6" target="Ec9qoXcUu5Weos5omlV9-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-420" y="160" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-320" y="148" />
+              <mxPoint x="-320" y="190" />
+              <mxPoint x="-180" y="190" />
+              <mxPoint x="-180" y="290" />
+              <mxPoint x="-100" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;Grocery:ExpenseCategory&amp;nbsp;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;categoryId = 1&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;name = &quot;Grocery&quot;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-290" y="540" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-17" target="Ec9qoXcUu5Weos5omlV9-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-21" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;Dollar:Currency&amp;nbsp;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;currencyId = 1&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;name = &quot;Dollar&quot;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;conversion = 1.0&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;symbol = &#39;$&#39;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-640" y="540" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Ec9qoXcUu5Weos5omlV9-23" target="Ec9qoXcUu5Weos5omlV9-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ec9qoXcUu5Weos5omlV9-23" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;balance1:Balance&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;balanceId = 1&lt;br&gt;name = &quot;Monthly Wage&quot;&lt;br&gt;value = 2000&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;date = 01-05-2024&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;userId = 1&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;currency = &#39;$&quot;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-840" y="390" width="160" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
