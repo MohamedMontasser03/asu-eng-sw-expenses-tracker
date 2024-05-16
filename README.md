@@ -1,5 +1,26 @@
-# Create T3 App
-
+# Expense Tracker
+## Overview
+Use Case Diagram             |  Class Diagram
+:-------------------------:|:-------------------------:
+![Use Case Diagram](./Deliverables/Use%20Case%20Diagram/Use_Case_Diagram.png)  | ![Class Diagram](Deliverables/Class%20Diagram/Expense_Tracker_Class_Diagram.png)
+| UX Design | Sequence Diagram |
+![UX Design](./Deliverables/UX%20Design/UX_Design.png) | <table>  <thead> </thead>  <tbody>  <tr>  <img src="https://raw.githubusercontent.com/MohamedMontasser03/asu-eng-sw-expenses-tracker/main/Deliverables/Sequence%20Diagrams/Login.drawio.png" width="300" height="200">  <d><img src="https://raw.githubusercontent.com/MohamedMontasser03/asu-eng-sw-expenses-tracker/main/Deliverables/Sequence%20Diagrams/addExpense.png" width="300" height="200"></td> <d><img src="https://raw.githubusercontent.com/MohamedMontasser03/asu-eng-sw-expenses-tracker/main/Deliverables/Sequence%20Diagrams/generateReport.drawio.png" width="300" height="200">  </tbody>  </table>      
+ <table>
+   <thead>
+   </thead> 
+    <tbody>
+      <tr>
+        <th>GUI Sample</th>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://raw.githubusercontent.com/MohamedMontasser03/asu-eng-sw-expenses-tracker/main/Deliverables/GUI%20Sample/FrontPage.png">
+        </td>
+     </tr>
+    </tbody>
+ </table>
+ 
+## T3 Stack
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
 ## What's next? How do I make an app with this?
