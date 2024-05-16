@@ -2,6 +2,7 @@ import { useSession } from "next-auth/react";
 import { useState } from "react";
 import { api } from "~/utils/api";
 import { CreateBalanceForm } from "./balance-create";
+import { CreateExpenseForm } from "./expense-create";
 
 export const ExpensesTable = () => {
     const { data: sessionData } = useSession();
@@ -10,9 +11,14 @@ export const ExpensesTable = () => {
         error: balancesError,
         isLoading: balancesLoading,
     } = api.balance.getBalances.useQuery();
+    const {
+        data: expenses,
+        error: expensesError,
+        isLoading: expensesLoading,
+    } = api.expense.getExpenses.useQuery();
     const trpcUtils = api.useUtils();
     const [state, setState] = useState<
-        "view" | "balanceCreateForm"
+        "view" | "balanceCreateForm" | "expenseCreateForm"
     >("view");
     const {
         mutate: deleteBalance,
@@ -26,11 +32,11 @@ export const ExpensesTable = () => {
         return <div>Sign in to see your expenses</div>;
     }
 
-    if (balancesLoading) {
+    if (balancesLoading || expensesLoading) {
         return <div>Loading...</div>;
     }
 
-    if (balancesError ?? balances === undefined) {
+    if (balancesError ?? expensesError ?? (!balances || !expenses)) {
         return <div>Error loading expenses</div>;
     }
 
@@ -99,7 +105,32 @@ export const ExpensesTable = () => {
             {/* show expenses */}
             <div className="flex justify-between flex-col gap-4 bg-gray-800 p-4 rounded mt-4">
                 <h2>Your expenses</h2>
+                <button
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => {
+                        setState("expenseCreateForm");
+                    }}
+                >
+                    Add an expense
+                </button>
+
+                {state === "expenseCreateForm" && (
+                    <CreateExpenseForm onSubmit={() => {
+                        setState("view");
+                    }} />
+                )}
+
+                <div className="flex flex-col gap-4">
+                    {expenses.map((expense) => (
+                        <div key={expense.id} className="flex justify-between">
+                            <div>{expense.name}</div>
+                            <div>{expense.value}{expense.currency.symbol}</div>
+                            <div>{expense.category.name}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
 };
+
